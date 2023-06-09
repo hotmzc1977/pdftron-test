@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useRef } from 'react';
+import WebViewer, { WebViewerInstance } from '@pdftron/webviewer'
+import ImageEditor from './ImageEditor';
 import './App.css';
 
 function App() {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{ width: "50%", border: "1px solid black", margin: "2px" }}>
+        <ImageEditor />
+      </div>
+      <div style={{ width: "50%", border: "1px solid black", margin: "2px" }}>
+        <ImageEditor />
+      </div>
     </div>
   );
 }
